@@ -1,6 +1,6 @@
-package org.ramirez.hernandez.jorge.pruebaconcepto.controller;
+package com.jorgehernandezramirez.spring.springboot.rabbitmq.controller;
 
-import org.ramirez.hernandez.jorge.pruebaconcepto.config.RabbitConfiguration;
+import com.jorgehernandezramirez.spring.springboot.rabbitmq.config.RabbitConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -14,6 +14,8 @@ public class TestController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TestController.class);
 
+    private static final String MESSAGE = "Message to RabbitMQ!";
+
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
@@ -23,7 +25,7 @@ public class TestController {
 
     @RequestMapping("/")
     public String doSendMessageToRabbitMQ() {
-        rabbitTemplate.convertAndSend(RabbitConfiguration.QUEUE_NAME, "Message to RabbitMQ!");
+        rabbitTemplate.convertAndSend(RabbitConfiguration.QUEUE_NAME, MESSAGE);
         return "Alive!";
     }
 

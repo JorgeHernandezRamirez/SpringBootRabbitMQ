@@ -1,4 +1,4 @@
-package org.ramirez.hernandez.jorge.pruebaconcepto;
+package com.jorgehernandezramirez.spring.springboot.rabbitmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

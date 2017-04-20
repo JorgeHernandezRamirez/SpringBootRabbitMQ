@@ -1,4 +1,4 @@
-package org.ramirez.hernandez.jorge.pruebaconcepto.config;
+package com.jorgehernandezramirez.spring.springboot.rabbitmq.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -20,11 +20,11 @@ public class RabbitConfiguration {
     @Bean
     public ConnectionFactory connectionFactory() throws Exception {
         final CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
-        connectionFactory.setAddresses("localhost");
+        connectionFactory.setAddresses("192.168.99.100");
         connectionFactory.setPort(5672);
         connectionFactory.setUsername("admin");
-        connectionFactory.setPassword("1234");
-        connectionFactory.setVirtualHost("mivhost");
+        connectionFactory.setPassword("admin");
+        connectionFactory.setVirtualHost("/");
         return connectionFactory;
     }
 
