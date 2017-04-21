@@ -1,5 +1,5 @@
 rabbit1:
-  image: "rabbitmq:3-management"
+  image: "rabbitmq"
   environment:
     RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
     RABBITMQ_DEFAULT_USER: "admin"
