@@ -16,7 +16,9 @@ public class RabbitConfiguration {
 
     public static final String QUEUE_NAME = "test-queue";
 
-    private static final String EXCHANGE_NAME = "test-queue-exchange";
+    private static final String EXCHANGE_NAME = "test-exchange";
+
+    private static final String ROUTING_KEY = "test-routing-key";
 
     @Value("${rabbitmq.host}")
     private String host;
@@ -61,6 +63,6 @@ public class RabbitConfiguration {
 
     @Bean
     public Binding binding(Queue queue, TopicExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(QUEUE_NAME);
+        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY);
     }
 }

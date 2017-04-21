@@ -17,7 +17,7 @@ apply plugin: 'org.springframework.boot'
 sourceCompatibility = 1.8
 
 springBoot {
-    mainClass = "org.ramirez.hernandez.jorge.pruebaconcepto.Application"
+    mainClass = "com.jorgehernandezramirez.spring.springboot.rabbitmq.Application"
 }
 
 repositories {
